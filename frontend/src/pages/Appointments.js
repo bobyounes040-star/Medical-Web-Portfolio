@@ -126,12 +126,12 @@ export default function Appointments() {
     return `${base} border-amber-200 bg-amber-50 text-amber-700`; // pending
   };
 
-  // Optional: sort upcoming first
+
   const sortedAppointments = useMemo(() => {
     return [...appointments].sort((a, b) => new Date(a.date) - new Date(b.date));
   }, [appointments]);
 
-  // If you accidentally render this page while logged out:
+  
   if (!user) {
     return (
       <div className="mx-auto max-w-4xl p-6">
