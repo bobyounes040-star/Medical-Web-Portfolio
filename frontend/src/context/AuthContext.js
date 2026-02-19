@@ -14,10 +14,6 @@ function safeParseUser() {
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(safeParseUser());
-
-  // Supports:
-  // 1) login({ token, user })
-  // 2) login(token, user)
   const login = (arg1, arg2) => {
     const data =
       typeof arg1 === "object" && arg1?.token && arg1?.user
