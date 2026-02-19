@@ -1,0 +1,31 @@
+# Smart Clinic — Appointment Booking System
+
+A full-stack clinic scheduling app where patients can browse doctors and book appointments, doctors can manage appointment requests, and admins can manage doctor profiles and schedules.
+
+## Features
+- Role-based access: ** Patient / Doctor / Admin **
+
+- Appointment booking with:
+  - Slot rounding 
+  - Availability checks (weekly schedule ranges)
+  - Conflict prevention (prevents double booking for the same doctor + slot)
+
+- Appointment statuses: pending / approved / rejected / cancelled
+
+- Doctor management (Admin):
+  - Create/edit/remove doctors
+  - Weekly schedule blocks
+  - Upload doctor avatar (stored on Cloudinary as a URL)
+
+- OTP-based authentication (email verification / secure flow)
+
+## Tech Stack
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB, Mongoose
+- **Auth:** JWT (+ OTP flow)
+- **Uploads:** Multer + Cloudinary Storage
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+After following instructions inside .env file located inside backend folder to launch Backend + Frontend:
+- For Frontend: cd frontend then npm start (make sure terminal is command prompt)
+- For Backend: cd backend then node server
