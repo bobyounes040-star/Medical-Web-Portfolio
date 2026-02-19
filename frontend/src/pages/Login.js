@@ -9,7 +9,7 @@ export default function Login() {
     const location = useLocation();
 
     const params = new URLSearchParams(location.search);
-    const redirect = params.get("redirect"); // optional
+    const redirect = params.get("redirect"); 
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -39,13 +39,13 @@ export default function Login() {
                 password,
             });
 
-            // res.data should be { token, user }
+           
             login(res.data);
             goNext();
         } catch (err) {
             const msg = err?.response?.data?.message || "Login failed";
 
-            // If backend tells you “verify first”
+           
             if (err?.response?.status === 403 && err?.response?.data?.needsVerification) {
                 sessionStorage.setItem("verifyEmail", email.trim().toLowerCase());
                 nav("/verify");
